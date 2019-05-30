@@ -41,7 +41,7 @@
         "additionalMouseCrs": ["EPSG:21781", "EPSG:2056"]
       },
       {
-        "url": "http://qgis-server.sekm-net/cgi-bin/qgis_mapserv.fcgi",
+        "url": "http://172.28.1.2/cgi-bin/qgis_mapserv.fcgi",
         "attribution": "Test. Credits to Tim Sutton.",
         "attributionUrl": "https://www.geoportal.de/",
         "format": "image/png; mode=8bit",

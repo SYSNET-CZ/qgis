@@ -7,7 +7,13 @@ services:
             - "80:80"
         restart: always
         volumes:
-             - ./server/data/:/project/
+            - ./server/data/:/project/
+        networks:
+            backend:
+                ipv4_address: 172.28.1.2
+        deploy:
+            mode: global
+
     client:
         build:
             context: ./client/
@@ -16,4 +22,16 @@ services:
         ports:
             - "8081:8081"
         volumes:
-             - ./client/data/themesConfig.json:/opt/qwc2-demo-app/themesConfig.json
+            - ./client/data/themesConfig.json:/opt/qwc2-demo-app/themesConfig.json
+        networks:
+            backend:
+                ipv4_address: 172.28.1.3
+        deploy:
+            mode: global
+
+networks:
+    backend:
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.28.0.0/16
