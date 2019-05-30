@@ -29,3 +29,5 @@ Put the IP from your computer in docker-qgis-server-qwc2/client/data/themesConfi
 	-v $(pwd)/client/data/themesConfig.json:/opt/qwc2-demo-app/themesConfig.json \
 	-t sysnetcz/qgis-client
 
+
+    http://192.168.1.243/cgi-bin/qgis_mapserv.fcgi?service=WMS&REQUEST=GetCapabilities&MAP=project.qgs
