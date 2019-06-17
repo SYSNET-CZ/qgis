@@ -1,8 +1,7 @@
 #FROM debian:stretch-slim
-FROM debian:latest
+FROM debian:stable
 
 MAINTAINER Radim Jaeger <rjaeger@sysnet.cz>
-
 
 RUN export DEBIAN_FRONTEND=noninteractive
 ENV DEBIAN_FRONTEND noninteractive
@@ -37,9 +36,8 @@ RUN apt-get install -y nodejs
 RUN /usr/bin/nodejs -v
 RUN /usr/bin/npm -v
 RUN /usr/bin/npm install -g yarn
-RUN git clone --recursive https://github.com/qgis/qwc2-demo-app.git
-WORKDIR /opt/qwc2-demo-app/
+RUN git clone --recursive https://github.com/SYSNET-CZ/sekm-geoportal.git
+WORKDIR /opt/sekm-geoportal/
 RUN /usr/bin/yarn install 
 EXPOSE 8081
 CMD /usr/bin/yarn start
-

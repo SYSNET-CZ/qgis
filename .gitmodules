@@ -1,0 +1,3 @@
+[submodule "client/sekm-geoportal"]
+	path = client/sekm-geoportal
+	url = https://github.com/SYSNET-CZ/sekm-geoportal.git

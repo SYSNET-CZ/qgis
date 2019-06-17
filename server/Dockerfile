@@ -47,7 +47,7 @@ RUN mv /opt/qgis-server/plugins/qgis-wfsOutputExtension-master /opt/qgis-server/
 ADD 001-qgis-server.conf /etc/apache2/sites-available/001-qgis-server.conf
 
 #Setting up Apache
-RUN export LC_ALL="C" && a2enmod fcgid && a2enconf serve-cgi-bin
+RUN export LC_ALL="cs_CZ.UTF-8" && a2enmod fcgid && a2enconf serve-cgi-bin
 RUN a2dissite 000-default
 RUN a2ensite 001-qgis-server
 EXPOSE 80
