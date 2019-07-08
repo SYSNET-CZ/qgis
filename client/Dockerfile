@@ -33,6 +33,7 @@ ADD https://deb.nodesource.com/setup_8.x nodesource_setup.sh
 RUN chmod +x nodesource_setup.sh
 RUN ./nodesource_setup.sh
 RUN apt-get install -y nodejs 
+RUN apt-get install -y build-essential
 RUN /usr/bin/nodejs -v
 RUN /usr/bin/npm -v
 RUN /usr/bin/npm install -g yarn
