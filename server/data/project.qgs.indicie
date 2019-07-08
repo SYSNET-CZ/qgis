@@ -1,0 +1,2186 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis version="3.6.3-Noosa" projectname="Indicie kontaminace">
+  <homePath path=""/>
+  <title>Indicie kontaminace</title>
+  <autotransaction active="0"/>
+  <evaluateDefaultValues active="0"/>
+  <trust active="0"/>
+  <projectCrs>
+    <spatialrefsys>
+      <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+      <srsid>26812</srsid>
+      <srid>5514</srid>
+      <authid>EPSG:5514</authid>
+      <description>S-JTSK (Greenwich) / Krovak East North</description>
+      <projectionacronym>krovak</projectionacronym>
+      <ellipsoidacronym>bessel</ellipsoidacronym>
+      <geographicflag>false</geographicflag>
+    </spatialrefsys>
+  </projectCrs>
+  <layer-tree-group>
+    <customproperties/>
+    <layer-tree-layer providerKey="postgres" source="dbname='gis' host=postgis.sekm-net port=5432 user='docker' password='docker' sslmode=disable srid=5514 type=MultiPoint checkPrimaryKeyUnicity='1' table=&quot;public&quot;.&quot;indicie-pr&quot; (geom) sql=" name="indicie-pr" checked="Qt::Checked" expanded="1" id="indicie_pr_abb08ce9_5fd2_445d_9ccb_2d2d227790c1">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer providerKey="postgres" source="dbname='gis' host=postgis.sekm-net port=5432 user='docker' password='docker' sslmode=disable srid=5514 type=MultiPoint checkPrimaryKeyUnicity='1' table=&quot;public&quot;.&quot;indicie-dpz&quot; (geom) sql=" name="indicie-dpz" checked="Qt::Unchecked" expanded="1" id="indicie_dpz_5d408a7d_345c_42d9_8ebd_2b8fed27aefc">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer providerKey="postgres" source="dbname='gis' host=postgis.sekm-net port=5432 user='docker' password='docker' sslmode=disable srid=5514 type=MultiPoint checkPrimaryKeyUnicity='1' table=&quot;public&quot;.&quot;hranice&quot; (geom) sql=" name="hranice" checked="Qt::Unchecked" expanded="1" id="hranice_bd71d6c7_ce9f_4650_bf18_ec4101d08e6e">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer providerKey="wms" source="crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=GR_ORTFOTORGB&amp;styles&amp;url=http://geoportal.cuzk.cz/WMS_ORTOFOTO_PUB/WMService.aspx" name="Ortofoto" checked="Qt::Unchecked" expanded="0" id="Ortofoto_c1a255f6_db31_4f34_b203_f9d2e9a6c872">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer providerKey="wms" source="crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=GR_ZM25&amp;styles&amp;url=http://geoportal.cuzk.cz/WMS_ZM25_PUB/WMService.aspx" name="Základní mapa 1:25 000" checked="Qt::Checked" expanded="0" id="Základní_mapa_1_25_000_7ea438a2_ece5_4b96_ac2d_cf5eb274aee3">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer providerKey="wms" source="crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=GR_ZM10&amp;styles&amp;url=http://geoportal.cuzk.cz/WMS_ZM10_PUB/WMService.aspx" name="Základní mapa 1:10 000" checked="Qt::Checked" expanded="0" id="Základní_mapa_1_10_000_c40dd6e5_fb74_4598_99ad_32e0be2e4552">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer providerKey="wms" source="crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=GR_MCR2M&amp;styles&amp;url=http://geoportal.cuzk.cz/WMS_PREHLEDKY/WMService.aspx" name="MČR 1:2 000 000" checked="Qt::Checked" expanded="1" id="MČR_1_2_000_000_965dfeb0_be97_4ac7_a5d9_986c3ab433c8">
+      <customproperties/>
+    </layer-tree-layer>
+    <custom-order enabled="0">
+      <item>indicie_dpz_5d408a7d_345c_42d9_8ebd_2b8fed27aefc</item>
+      <item>indicie_pr_abb08ce9_5fd2_445d_9ccb_2d2d227790c1</item>
+      <item>Základní_mapa_1_10_000_c40dd6e5_fb74_4598_99ad_32e0be2e4552</item>
+      <item>Základní_mapa_1_25_000_7ea438a2_ece5_4b96_ac2d_cf5eb274aee3</item>
+      <item>hranice_bd71d6c7_ce9f_4650_bf18_ec4101d08e6e</item>
+      <item>Ortofoto_c1a255f6_db31_4f34_b203_f9d2e9a6c872</item>
+      <item>MČR_1_2_000_000_965dfeb0_be97_4ac7_a5d9_986c3ab433c8</item>
+    </custom-order>
+  </layer-tree-group>
+  <snapping-settings tolerance="12" unit="1" type="1" mode="2" intersection-snapping="0" enabled="0">
+    <individual-layer-settings>
+      <layer-setting tolerance="12" type="1" units="1" id="hranice_bd71d6c7_ce9f_4650_bf18_ec4101d08e6e" enabled="0"/>
+      <layer-setting tolerance="12" type="1" units="1" id="indicie_pr_abb08ce9_5fd2_445d_9ccb_2d2d227790c1" enabled="0"/>
+      <layer-setting tolerance="12" type="1" units="1" id="indicie_dpz_5d408a7d_345c_42d9_8ebd_2b8fed27aefc" enabled="0"/>
+    </individual-layer-settings>
+  </snapping-settings>
+  <relations/>
+  <mapcanvas annotationsVisible="1" name="theMapCanvas">
+    <units>meters</units>
+    <extent>
+      <xmin>-951044.43344616866670549</xmin>
+      <ymin>-1310487.33323055040091276</ymin>
+      <xmax>-385365.26620250917039812</xmax>
+      <ymax>-866548.18094380479305983</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+        <srsid>26812</srsid>
+        <srid>5514</srid>
+        <authid>EPSG:5514</authid>
+        <description>S-JTSK (Greenwich) / Krovak East North</description>
+        <projectionacronym>krovak</projectionacronym>
+        <ellipsoidacronym>bessel</ellipsoidacronym>
+        <geographicflag>false</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+    <expressionContextScope/>
+  </mapcanvas>
+  <projectModels/>
+  <legend updateDrawingOrder="true">
+    <legendlayer drawingOrder="-1" checked="Qt::Checked" name="indicie-pr" open="true" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="indicie_pr_abb08ce9_5fd2_445d_9ccb_2d2d227790c1" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" checked="Qt::Unchecked" name="indicie-dpz" open="true" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="indicie_dpz_5d408a7d_345c_42d9_8ebd_2b8fed27aefc" visible="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" checked="Qt::Unchecked" name="hranice" open="true" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="hranice_bd71d6c7_ce9f_4650_bf18_ec4101d08e6e" visible="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" checked="Qt::Unchecked" name="Ortofoto" open="false" showFeatureCount="0">
+      <filegroup open="false" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="Ortofoto_c1a255f6_db31_4f34_b203_f9d2e9a6c872" visible="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" checked="Qt::Checked" name="Základní mapa 1:25 000" open="false" showFeatureCount="0">
+      <filegroup open="false" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="Základní_mapa_1_25_000_7ea438a2_ece5_4b96_ac2d_cf5eb274aee3" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" checked="Qt::Checked" name="Základní mapa 1:10 000" open="false" showFeatureCount="0">
+      <filegroup open="false" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="Základní_mapa_1_10_000_c40dd6e5_fb74_4598_99ad_32e0be2e4552" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" checked="Qt::Checked" name="MČR 1:2 000 000" open="true" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="MČR_1_2_000_000_965dfeb0_be97_4ac7_a5d9_986c3ab433c8" visible="1"/>
+      </filegroup>
+    </legendlayer>
+  </legend>
+  <mapViewDocks/>
+  <mapViewDocks3D/>
+  <projectlayers>
+    <maplayer styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="1" autoRefreshEnabled="0" type="raster" minScale="1e+08" refreshOnNotifyMessage="" maxScale="50000" refreshOnNotifyEnabled="0" autoRefreshTime="0">
+      <extent>
+        <xmin>-912487.51491621497552842</xmin>
+        <ymin>-1234853.2524045193567872</ymin>
+        <xmax>-422462.0841103756101802</xmax>
+        <ymax>-926854.32638308044988662</ymax>
+      </extent>
+      <id>MČR_1_2_000_000_965dfeb0_be97_4ac7_a5d9_986c3ab433c8</id>
+      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=GR_MCR2M&amp;styles&amp;url=http://geoportal.cuzk.cz/WMS_PREHLEDKY/WMService.aspx</datasource>
+      <shortname>mcr2m</shortname>
+      <title>Přehledová mapa  ČR 1:2 000 000</title>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>MČR 1:2 000 000</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+          <srsid>26812</srsid>
+          <srid>5514</srid>
+          <authid>EPSG:5514</authid>
+          <description>S-JTSK (Greenwich) / Krovak East North</description>
+          <projectionacronym>krovak</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial miny="0" crs="" maxy="0" maxz="0" minx="0" dimensions="2" minz="0" maxx="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+      </resourceMetadata>
+      <provider>wms</provider>
+      <noData>
+        <noDataList useSrcNoData="0" bandNo="1"/>
+      </noData>
+      <map-layer-style-manager current="výchozí">
+        <map-layer-style name="výchozí"/>
+      </map-layer-style-manager>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>0</Searchable>
+      </flags>
+      <customproperties>
+        <property value="true" key="WMSBackgroundLayer"/>
+        <property value="true" key="WMSPublishDataSourceUrl"/>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property value="Text" key="identify/format"/>
+      </customproperties>
+      <pipe>
+        <rasterrenderer type="singlebandcolordata" alphaBand="-1" opacity="1" band="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>None</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation saturation="0" grayscaleMode="0" colorizeStrength="100" colorizeOn="0" colorizeRed="255" colorizeGreen="128" colorizeBlue="128"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0" autoRefreshEnabled="0" type="raster" minScale="1e+08" refreshOnNotifyMessage="" maxScale="0" refreshOnNotifyEnabled="0" autoRefreshTime="0">
+      <extent>
+        <xmin>-905000</xmin>
+        <ymin>-1228000</ymin>
+        <xmax>-430000</xmax>
+        <ymax>-934000</ymax>
+      </extent>
+      <id>Ortofoto_c1a255f6_db31_4f34_b203_f9d2e9a6c872</id>
+      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=GR_ORTFOTORGB&amp;styles&amp;url=http://geoportal.cuzk.cz/WMS_ORTOFOTO_PUB/WMService.aspx</datasource>
+      <shortname>ortofoto</shortname>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Ortofoto</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+          <srsid>26812</srsid>
+          <srid>5514</srid>
+          <authid>EPSG:5514</authid>
+          <description>S-JTSK (Greenwich) / Krovak East North</description>
+          <projectionacronym>krovak</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial miny="0" crs="" maxy="0" maxz="0" minx="0" dimensions="2" minz="0" maxx="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+      </resourceMetadata>
+      <provider>wms</provider>
+      <noData>
+        <noDataList useSrcNoData="0" bandNo="1"/>
+      </noData>
+      <map-layer-style-manager current="výchozí">
+        <map-layer-style name="výchozí"/>
+      </map-layer-style-manager>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>0</Searchable>
+      </flags>
+      <customproperties>
+        <property value="false" key="WMSBackgroundLayer"/>
+        <property value="true" key="WMSPublishDataSourceUrl"/>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property value="Text" key="identify/format"/>
+      </customproperties>
+      <pipe>
+        <rasterrenderer type="singlebandcolordata" alphaBand="-1" opacity="1" band="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>None</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation saturation="0" grayscaleMode="0" colorizeStrength="100" colorizeOn="0" colorizeRed="255" colorizeGreen="128" colorizeBlue="128"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="1" autoRefreshEnabled="0" type="raster" minScale="25000" refreshOnNotifyMessage="" maxScale="1000" refreshOnNotifyEnabled="0" autoRefreshTime="0">
+      <extent>
+        <xmin>-906000.3307645550230518</xmin>
+        <ymin>-1228000.36498015886172652</ymin>
+        <xmax>-430000.15076455497182906</xmax>
+        <ymax>-933999.99998015875462443</ymax>
+      </extent>
+      <id>Základní_mapa_1_10_000_c40dd6e5_fb74_4598_99ad_32e0be2e4552</id>
+      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=GR_ZM10&amp;styles&amp;url=http://geoportal.cuzk.cz/WMS_ZM10_PUB/WMService.aspx</datasource>
+      <shortname>zm10</shortname>
+      <title>Základní mapa ČR 1:10 000</title>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Základní mapa 1:10 000</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+          <srsid>26812</srsid>
+          <srid>5514</srid>
+          <authid>EPSG:5514</authid>
+          <description>S-JTSK (Greenwich) / Krovak East North</description>
+          <projectionacronym>krovak</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial miny="0" crs="" maxy="0" maxz="0" minx="0" dimensions="2" minz="0" maxx="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+      </resourceMetadata>
+      <provider>wms</provider>
+      <noData>
+        <noDataList useSrcNoData="0" bandNo="1"/>
+      </noData>
+      <map-layer-style-manager current="výchozí">
+        <map-layer-style name="výchozí"/>
+      </map-layer-style-manager>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>0</Searchable>
+      </flags>
+      <customproperties>
+        <property value="false" key="WMSBackgroundLayer"/>
+        <property value="true" key="WMSPublishDataSourceUrl"/>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property value="Text" key="identify/format"/>
+      </customproperties>
+      <pipe>
+        <rasterrenderer type="singlebandcolordata" alphaBand="-1" opacity="1" band="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>None</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation saturation="0" grayscaleMode="0" colorizeStrength="100" colorizeOn="0" colorizeRed="255" colorizeGreen="128" colorizeBlue="128"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="1" autoRefreshEnabled="0" type="raster" minScale="100000" refreshOnNotifyMessage="" maxScale="25000" refreshOnNotifyEnabled="0" autoRefreshTime="0">
+      <extent>
+        <xmin>-905000.82691138761583716</xmin>
+        <ymin>-1230000.36245039710775018</ymin>
+        <xmax>-430000.18941138760419562</xmax>
+        <ymax>-934999.99995039694476873</ymax>
+      </extent>
+      <id>Základní_mapa_1_25_000_7ea438a2_ece5_4b96_ac2d_cf5eb274aee3</id>
+      <datasource>crs=EPSG:5514&amp;dpiMode=7&amp;format=image/png&amp;layers=GR_ZM25&amp;styles&amp;url=http://geoportal.cuzk.cz/WMS_ZM25_PUB/WMService.aspx</datasource>
+      <shortname>zm25</shortname>
+      <title>Základní mapa ČR 1:25 000</title>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Základní mapa 1:25 000</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+          <srsid>26812</srsid>
+          <srid>5514</srid>
+          <authid>EPSG:5514</authid>
+          <description>S-JTSK (Greenwich) / Krovak East North</description>
+          <projectionacronym>krovak</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial miny="0" crs="" maxy="0" maxz="0" minx="0" dimensions="2" minz="0" maxx="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+      </resourceMetadata>
+      <provider>wms</provider>
+      <noData>
+        <noDataList useSrcNoData="0" bandNo="1"/>
+      </noData>
+      <map-layer-style-manager current="výchozí">
+        <map-layer-style name="výchozí"/>
+      </map-layer-style-manager>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>0</Searchable>
+      </flags>
+      <customproperties>
+        <property value="false" key="WMSBackgroundLayer"/>
+        <property value="true" key="WMSPublishDataSourceUrl"/>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property value="Text" key="identify/format"/>
+      </customproperties>
+      <pipe>
+        <rasterrenderer type="singlebandcolordata" alphaBand="-1" opacity="1" band="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>None</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation saturation="0" grayscaleMode="0" colorizeStrength="100" colorizeOn="0" colorizeRed="255" colorizeGreen="128" colorizeBlue="128"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer styleCategories="AllStyleCategories" labelsEnabled="0" geometry="Point" simplifyAlgorithm="0" hasScaleBasedVisibilityFlag="0" autoRefreshEnabled="0" type="vector" minScale="1e+08" refreshOnNotifyMessage="" simplifyMaxScale="1" simplifyLocal="1" readOnly="0" maxScale="0" simplifyDrawingHints="1" refreshOnNotifyEnabled="0" simplifyDrawingTol="1" autoRefreshTime="0">
+      <extent>
+        <xmin>-903027.08079471602104604</xmin>
+        <ymin>-1219250.95516564999707043</ymin>
+        <xmax>-433614.13652167801046744</xmax>
+        <ymax>-937013.58781640895176679</ymax>
+      </extent>
+      <id>hranice_bd71d6c7_ce9f_4650_bf18_ec4101d08e6e</id>
+      <datasource>dbname='gis' host=postgis.sekm-net port=5432 user='docker' password='docker' sslmode=disable srid=5514 type=MultiPoint checkPrimaryKeyUnicity='1' table="public"."hranice" (geom) sql=</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>hranice</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+          <srsid>26812</srsid>
+          <srid>5514</srid>
+          <authid>EPSG:5514</authid>
+          <description>S-JTSK (Greenwich) / Krovak East North</description>
+          <projectionacronym>krovak</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type>dataset</type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+            <srsid>26812</srsid>
+            <srid>5514</srid>
+            <authid>EPSG:5514</authid>
+            <description>S-JTSK (Greenwich) / Krovak East North</description>
+            <projectionacronym>krovak</projectionacronym>
+            <ellipsoidacronym>bessel</ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="System">postgres</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="výchozí">
+        <map-layer-style name="výchozí"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <renderer-v2 enableorderby="0" type="singleSymbol" forceraster="0" symbollevels="0">
+        <symbols>
+          <symbol alpha="1" type="marker" name="0" clip_to_extent="1" force_rhr="0">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="114,155,111,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="circle"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="2"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
+        <activeChecks/>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="id">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="typ">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="revize">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="koment">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="indicie">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="indic_id">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="xcoord">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="ycoord">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="nazev_orp">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="charorp">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="kod_ku_p">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="naz_ku_p">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="kod_obec_p">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="naz_obec_p">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="lau1_p">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="naz_lau1_p">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="cznuts3">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="naz_cnuts3">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="poznamka">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="kod_orp">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="id_orp">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="stav">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="id" name=""/>
+        <alias index="1" field="typ" name=""/>
+        <alias index="2" field="revize" name=""/>
+        <alias index="3" field="koment" name=""/>
+        <alias index="4" field="indicie" name=""/>
+        <alias index="5" field="indic_id" name=""/>
+        <alias index="6" field="xcoord" name=""/>
+        <alias index="7" field="ycoord" name=""/>
+        <alias index="8" field="nazev_orp" name=""/>
+        <alias index="9" field="charorp" name=""/>
+        <alias index="10" field="kod_ku_p" name=""/>
+        <alias index="11" field="naz_ku_p" name=""/>
+        <alias index="12" field="kod_obec_p" name=""/>
+        <alias index="13" field="naz_obec_p" name=""/>
+        <alias index="14" field="lau1_p" name=""/>
+        <alias index="15" field="naz_lau1_p" name=""/>
+        <alias index="16" field="cznuts3" name=""/>
+        <alias index="17" field="naz_cnuts3" name=""/>
+        <alias index="18" field="poznamka" name=""/>
+        <alias index="19" field="kod_orp" name=""/>
+        <alias index="20" field="id_orp" name=""/>
+        <alias index="21" field="stav" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default field="id" expression="" applyOnUpdate="0"/>
+        <default field="typ" expression="" applyOnUpdate="0"/>
+        <default field="revize" expression="" applyOnUpdate="0"/>
+        <default field="koment" expression="" applyOnUpdate="0"/>
+        <default field="indicie" expression="" applyOnUpdate="0"/>
+        <default field="indic_id" expression="" applyOnUpdate="0"/>
+        <default field="xcoord" expression="" applyOnUpdate="0"/>
+        <default field="ycoord" expression="" applyOnUpdate="0"/>
+        <default field="nazev_orp" expression="" applyOnUpdate="0"/>
+        <default field="charorp" expression="" applyOnUpdate="0"/>
+        <default field="kod_ku_p" expression="" applyOnUpdate="0"/>
+        <default field="naz_ku_p" expression="" applyOnUpdate="0"/>
+        <default field="kod_obec_p" expression="" applyOnUpdate="0"/>
+        <default field="naz_obec_p" expression="" applyOnUpdate="0"/>
+        <default field="lau1_p" expression="" applyOnUpdate="0"/>
+        <default field="naz_lau1_p" expression="" applyOnUpdate="0"/>
+        <default field="cznuts3" expression="" applyOnUpdate="0"/>
+        <default field="naz_cnuts3" expression="" applyOnUpdate="0"/>
+        <default field="poznamka" expression="" applyOnUpdate="0"/>
+        <default field="kod_orp" expression="" applyOnUpdate="0"/>
+        <default field="id_orp" expression="" applyOnUpdate="0"/>
+        <default field="stav" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint field="id" notnull_strength="1" constraints="3" unique_strength="1" exp_strength="0"/>
+        <constraint field="typ" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="revize" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="koment" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="indicie" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="indic_id" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="xcoord" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="ycoord" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="nazev_orp" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="charorp" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="kod_ku_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="naz_ku_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="kod_obec_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="naz_obec_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="lau1_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="naz_lau1_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="cznuts3" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="naz_cnuts3" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="poznamka" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="kod_orp" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="id_orp" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="stav" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" field="id" desc=""/>
+        <constraint exp="" field="typ" desc=""/>
+        <constraint exp="" field="revize" desc=""/>
+        <constraint exp="" field="koment" desc=""/>
+        <constraint exp="" field="indicie" desc=""/>
+        <constraint exp="" field="indic_id" desc=""/>
+        <constraint exp="" field="xcoord" desc=""/>
+        <constraint exp="" field="ycoord" desc=""/>
+        <constraint exp="" field="nazev_orp" desc=""/>
+        <constraint exp="" field="charorp" desc=""/>
+        <constraint exp="" field="kod_ku_p" desc=""/>
+        <constraint exp="" field="naz_ku_p" desc=""/>
+        <constraint exp="" field="kod_obec_p" desc=""/>
+        <constraint exp="" field="naz_obec_p" desc=""/>
+        <constraint exp="" field="lau1_p" desc=""/>
+        <constraint exp="" field="naz_lau1_p" desc=""/>
+        <constraint exp="" field="cznuts3" desc=""/>
+        <constraint exp="" field="naz_cnuts3" desc=""/>
+        <constraint exp="" field="poznamka" desc=""/>
+        <constraint exp="" field="kod_orp" desc=""/>
+        <constraint exp="" field="id_orp" desc=""/>
+        <constraint exp="" field="stav" desc=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortOrder="0" sortExpression="" actionWidgetStyle="dropDown">
+        <columns/>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer styleCategories="AllStyleCategories" labelsEnabled="0" geometry="Point" simplifyAlgorithm="0" hasScaleBasedVisibilityFlag="0" autoRefreshEnabled="0" type="vector" minScale="1e+08" refreshOnNotifyMessage="" simplifyMaxScale="1" simplifyLocal="1" readOnly="0" maxScale="0" simplifyDrawingHints="0" refreshOnNotifyEnabled="0" simplifyDrawingTol="1" autoRefreshTime="0">
+      <extent>
+        <xmin>-903027.08079471602104604</xmin>
+        <ymin>-1219250.95516564999707043</ymin>
+        <xmax>-433614.13652167801046744</xmax>
+        <ymax>-937013.58781640895176679</ymax>
+      </extent>
+      <id>indicie_dpz_5d408a7d_345c_42d9_8ebd_2b8fed27aefc</id>
+      <datasource>dbname='gis' host=postgis.sekm-net port=5432 user='docker' password='docker' sslmode=disable srid=5514 type=MultiPoint checkPrimaryKeyUnicity='1' table="public"."indicie-dpz" (geom) sql=</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>indicie-dpz</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+          <srsid>26812</srsid>
+          <srid>5514</srid>
+          <authid>EPSG:5514</authid>
+          <description>S-JTSK (Greenwich) / Krovak East North</description>
+          <projectionacronym>krovak</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type>dataset</type>
+        <title></title>
+        <abstract></abstract>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+            <srsid>26812</srsid>
+            <srid>5514</srid>
+            <authid>EPSG:5514</authid>
+            <description>S-JTSK (Greenwich) / Krovak East North</description>
+            <projectionacronym>krovak</projectionacronym>
+            <ellipsoidacronym>bessel</ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial miny="0" crs="EPSG:5514" maxy="0" maxz="0" minx="0" dimensions="2" minz="0" maxx="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+      </resourceMetadata>
+      <provider encoding="System">postgres</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="výchozí">
+        <map-layer-style name="výchozí"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <renderer-v2 enableorderby="0" type="singleSymbol" forceraster="0" symbollevels="0">
+        <symbols>
+          <symbol alpha="1" type="marker" name="0" clip_to_extent="1" force_rhr="0">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="164,113,88,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="circle"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="2"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
+        <DiagramCategory minimumSize="0" minScaleDenominator="0" width="15" backgroundAlpha="255" backgroundColor="#ffffff" sizeType="MM" barWidth="5" labelPlacementMethod="XHeight" penColor="#000000" diagramOrientation="Up" enabled="0" penAlpha="255" rotationOffset="270" penWidth="0" height="15" scaleDependency="Area" lineSizeScale="3x:0,0,0,0,0,0" lineSizeType="MM" maxScaleDenominator="1e+08" sizeScale="3x:0,0,0,0,0,0" opacity="1" scaleBasedVisibility="0">
+          <fontProperties style="" description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0"/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings placement="0" zIndex="0" linePlacementFlags="18" obstacle="0" dist="0" showAll="1" priority="0">
+        <properties>
+          <Option type="Map">
+            <Option type="QString" value="" name="name"/>
+            <Option name="properties"/>
+            <Option type="QString" value="collection" name="type"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
+        <activeChecks/>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="id">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="typ">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="revize">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="koment">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="indicie">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="indic_id">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="xcoord">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="ycoord">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="nazev_orp">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="charorp">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="kod_ku_p">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="naz_ku_p">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="kod_obec_p">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="naz_obec_p">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="lau1_p">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="naz_lau1_p">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="cznuts3">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="naz_cnuts3">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="poznamka">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="kod_orp">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="id_orp">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="stav">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="id" name=""/>
+        <alias index="1" field="typ" name=""/>
+        <alias index="2" field="revize" name=""/>
+        <alias index="3" field="koment" name=""/>
+        <alias index="4" field="indicie" name=""/>
+        <alias index="5" field="indic_id" name=""/>
+        <alias index="6" field="xcoord" name=""/>
+        <alias index="7" field="ycoord" name=""/>
+        <alias index="8" field="nazev_orp" name=""/>
+        <alias index="9" field="charorp" name=""/>
+        <alias index="10" field="kod_ku_p" name=""/>
+        <alias index="11" field="naz_ku_p" name=""/>
+        <alias index="12" field="kod_obec_p" name=""/>
+        <alias index="13" field="naz_obec_p" name=""/>
+        <alias index="14" field="lau1_p" name=""/>
+        <alias index="15" field="naz_lau1_p" name=""/>
+        <alias index="16" field="cznuts3" name=""/>
+        <alias index="17" field="naz_cnuts3" name=""/>
+        <alias index="18" field="poznamka" name=""/>
+        <alias index="19" field="kod_orp" name=""/>
+        <alias index="20" field="id_orp" name=""/>
+        <alias index="21" field="stav" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default field="id" expression="" applyOnUpdate="0"/>
+        <default field="typ" expression="" applyOnUpdate="0"/>
+        <default field="revize" expression="" applyOnUpdate="0"/>
+        <default field="koment" expression="" applyOnUpdate="0"/>
+        <default field="indicie" expression="" applyOnUpdate="0"/>
+        <default field="indic_id" expression="" applyOnUpdate="0"/>
+        <default field="xcoord" expression="" applyOnUpdate="0"/>
+        <default field="ycoord" expression="" applyOnUpdate="0"/>
+        <default field="nazev_orp" expression="" applyOnUpdate="0"/>
+        <default field="charorp" expression="" applyOnUpdate="0"/>
+        <default field="kod_ku_p" expression="" applyOnUpdate="0"/>
+        <default field="naz_ku_p" expression="" applyOnUpdate="0"/>
+        <default field="kod_obec_p" expression="" applyOnUpdate="0"/>
+        <default field="naz_obec_p" expression="" applyOnUpdate="0"/>
+        <default field="lau1_p" expression="" applyOnUpdate="0"/>
+        <default field="naz_lau1_p" expression="" applyOnUpdate="0"/>
+        <default field="cznuts3" expression="" applyOnUpdate="0"/>
+        <default field="naz_cnuts3" expression="" applyOnUpdate="0"/>
+        <default field="poznamka" expression="" applyOnUpdate="0"/>
+        <default field="kod_orp" expression="" applyOnUpdate="0"/>
+        <default field="id_orp" expression="" applyOnUpdate="0"/>
+        <default field="stav" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint field="id" notnull_strength="1" constraints="3" unique_strength="1" exp_strength="0"/>
+        <constraint field="typ" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="revize" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="koment" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="indicie" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="indic_id" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="xcoord" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="ycoord" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="nazev_orp" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="charorp" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="kod_ku_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="naz_ku_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="kod_obec_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="naz_obec_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="lau1_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="naz_lau1_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="cznuts3" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="naz_cnuts3" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="poznamka" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="kod_orp" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="id_orp" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="stav" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" field="id" desc=""/>
+        <constraint exp="" field="typ" desc=""/>
+        <constraint exp="" field="revize" desc=""/>
+        <constraint exp="" field="koment" desc=""/>
+        <constraint exp="" field="indicie" desc=""/>
+        <constraint exp="" field="indic_id" desc=""/>
+        <constraint exp="" field="xcoord" desc=""/>
+        <constraint exp="" field="ycoord" desc=""/>
+        <constraint exp="" field="nazev_orp" desc=""/>
+        <constraint exp="" field="charorp" desc=""/>
+        <constraint exp="" field="kod_ku_p" desc=""/>
+        <constraint exp="" field="naz_ku_p" desc=""/>
+        <constraint exp="" field="kod_obec_p" desc=""/>
+        <constraint exp="" field="naz_obec_p" desc=""/>
+        <constraint exp="" field="lau1_p" desc=""/>
+        <constraint exp="" field="naz_lau1_p" desc=""/>
+        <constraint exp="" field="cznuts3" desc=""/>
+        <constraint exp="" field="naz_cnuts3" desc=""/>
+        <constraint exp="" field="poznamka" desc=""/>
+        <constraint exp="" field="kod_orp" desc=""/>
+        <constraint exp="" field="id_orp" desc=""/>
+        <constraint exp="" field="stav" desc=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortOrder="0" sortExpression="" actionWidgetStyle="dropDown">
+        <columns>
+          <column type="field" name="id" width="-1" hidden="0"/>
+          <column type="field" name="typ" width="-1" hidden="0"/>
+          <column type="field" name="revize" width="-1" hidden="0"/>
+          <column type="field" name="koment" width="-1" hidden="0"/>
+          <column type="field" name="indicie" width="-1" hidden="0"/>
+          <column type="field" name="indic_id" width="-1" hidden="0"/>
+          <column type="field" name="xcoord" width="-1" hidden="0"/>
+          <column type="field" name="ycoord" width="-1" hidden="0"/>
+          <column type="field" name="nazev_orp" width="-1" hidden="0"/>
+          <column type="field" name="charorp" width="-1" hidden="0"/>
+          <column type="field" name="kod_ku_p" width="-1" hidden="0"/>
+          <column type="field" name="naz_ku_p" width="-1" hidden="0"/>
+          <column type="field" name="kod_obec_p" width="-1" hidden="0"/>
+          <column type="field" name="naz_obec_p" width="-1" hidden="0"/>
+          <column type="field" name="lau1_p" width="-1" hidden="0"/>
+          <column type="field" name="naz_lau1_p" width="-1" hidden="0"/>
+          <column type="field" name="cznuts3" width="-1" hidden="0"/>
+          <column type="field" name="naz_cnuts3" width="-1" hidden="0"/>
+          <column type="field" name="poznamka" width="-1" hidden="0"/>
+          <column type="field" name="kod_orp" width="-1" hidden="0"/>
+          <column type="field" name="id_orp" width="-1" hidden="0"/>
+          <column type="field" name="stav" width="-1" hidden="0"/>
+          <column type="actions" width="-1" hidden="1"/>
+        </columns>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field editable="1" name="charorp"/>
+        <field editable="1" name="cznuts3"/>
+        <field editable="1" name="id"/>
+        <field editable="1" name="id_orp"/>
+        <field editable="1" name="indic_id"/>
+        <field editable="1" name="indicie"/>
+        <field editable="1" name="kod_ku_p"/>
+        <field editable="1" name="kod_obec_p"/>
+        <field editable="1" name="kod_orp"/>
+        <field editable="1" name="koment"/>
+        <field editable="1" name="lau1_p"/>
+        <field editable="1" name="naz_cnuts3"/>
+        <field editable="1" name="naz_ku_p"/>
+        <field editable="1" name="naz_lau1_p"/>
+        <field editable="1" name="naz_obec_p"/>
+        <field editable="1" name="nazev_orp"/>
+        <field editable="1" name="poznamka"/>
+        <field editable="1" name="revize"/>
+        <field editable="1" name="stav"/>
+        <field editable="1" name="typ"/>
+        <field editable="1" name="xcoord"/>
+        <field editable="1" name="ycoord"/>
+      </editable>
+      <labelOnTop>
+        <field labelOnTop="0" name="charorp"/>
+        <field labelOnTop="0" name="cznuts3"/>
+        <field labelOnTop="0" name="id"/>
+        <field labelOnTop="0" name="id_orp"/>
+        <field labelOnTop="0" name="indic_id"/>
+        <field labelOnTop="0" name="indicie"/>
+        <field labelOnTop="0" name="kod_ku_p"/>
+        <field labelOnTop="0" name="kod_obec_p"/>
+        <field labelOnTop="0" name="kod_orp"/>
+        <field labelOnTop="0" name="koment"/>
+        <field labelOnTop="0" name="lau1_p"/>
+        <field labelOnTop="0" name="naz_cnuts3"/>
+        <field labelOnTop="0" name="naz_ku_p"/>
+        <field labelOnTop="0" name="naz_lau1_p"/>
+        <field labelOnTop="0" name="naz_obec_p"/>
+        <field labelOnTop="0" name="nazev_orp"/>
+        <field labelOnTop="0" name="poznamka"/>
+        <field labelOnTop="0" name="revize"/>
+        <field labelOnTop="0" name="stav"/>
+        <field labelOnTop="0" name="typ"/>
+        <field labelOnTop="0" name="xcoord"/>
+        <field labelOnTop="0" name="ycoord"/>
+      </labelOnTop>
+      <widgets/>
+      <previewExpression>id</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer styleCategories="AllStyleCategories" labelsEnabled="0" geometry="Point" simplifyAlgorithm="0" hasScaleBasedVisibilityFlag="0" autoRefreshEnabled="0" type="vector" minScale="1e+08" refreshOnNotifyMessage="" simplifyMaxScale="1" simplifyLocal="1" readOnly="0" maxScale="0" simplifyDrawingHints="0" refreshOnNotifyEnabled="0" simplifyDrawingTol="1" autoRefreshTime="0">
+      <extent>
+        <xmin>-903027.08079471602104604</xmin>
+        <ymin>-1219250.95516564999707043</ymin>
+        <xmax>-433614.13652167801046744</xmax>
+        <ymax>-937013.58781640895176679</ymax>
+      </extent>
+      <id>indicie_pr_abb08ce9_5fd2_445d_9ccb_2d2d227790c1</id>
+      <datasource>dbname='gis' host=postgis.sekm-net port=5432 user='docker' password='docker' sslmode=disable srid=5514 type=MultiPoint checkPrimaryKeyUnicity='1' table="public"."indicie-pr" (geom) sql=</datasource>
+      <shortname>inicie-pr</shortname>
+      <title>Indicie kontaminace PR</title>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>indicie-pr</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+          <srsid>26812</srsid>
+          <srid>5514</srid>
+          <authid>EPSG:5514</authid>
+          <description>S-JTSK (Greenwich) / Krovak East North</description>
+          <projectionacronym>krovak</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier>dbname='gis' host=postgis.sekm-net port=5432 user='docker' password='docker' sslmode=disable srid=5514 type=MultiPoint checkPrimaryKeyUnicity='1' table="public"."indicie-pr" (geom) sql=</identifier>
+        <parentidentifier></parentidentifier>
+        <language>CZE</language>
+        <type>dataset</type>
+        <title></title>
+        <abstract></abstract>
+        <keywords vocabulary="gmd:topicCategory">
+          <keyword>Biota</keyword>
+          <keyword>Doprava</keyword>
+          <keyword>Ekonomie</keyword>
+          <keyword>Geovědní Informace</keyword>
+          <keyword>Hranice</keyword>
+          <keyword>Imagery Base Maps Earth Cover</keyword>
+          <keyword>Klimatologie Meteorologie Atmosféra</keyword>
+          <keyword>Komunikace s nástroji</keyword>
+          <keyword>Nadmořská výška</keyword>
+          <keyword>Oceány</keyword>
+          <keyword>Plánování Katastr</keyword>
+          <keyword>Prostředí</keyword>
+          <keyword>Společnost</keyword>
+          <keyword>Struktura</keyword>
+          <keyword>Umístění</keyword>
+          <keyword>Vnitrozemské vody</keyword>
+          <keyword>Zdraví</keyword>
+          <keyword>Zemědělství</keyword>
+          <keyword>Zpravodajské služby Armáda</keyword>
+        </keywords>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4>+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs</proj4>
+            <srsid>26812</srsid>
+            <srid>5514</srid>
+            <authid>EPSG:5514</authid>
+            <description>S-JTSK (Greenwich) / Krovak East North</description>
+            <projectionacronym>krovak</projectionacronym>
+            <ellipsoidacronym>bessel</ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial miny="-1219250.95519999996758997" crs="EPSG:5514" maxy="-937013.58779999997932464" maxz="0" minx="-903027.08079999999608845" dimensions="2" minz="0" maxx="-433614.13650000002235174"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+      </resourceMetadata>
+      <provider encoding="System">postgres</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="výchozí">
+        <map-layer-style name="výchozí"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <renderer-v2 enableorderby="0" type="singleSymbol" forceraster="0" symbollevels="0">
+        <symbols>
+          <symbol alpha="1" type="marker" name="0" clip_to_extent="1" force_rhr="0">
+            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="227,26,28,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="star"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="3"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
+        <DiagramCategory minimumSize="0" minScaleDenominator="0" width="15" backgroundAlpha="255" backgroundColor="#ffffff" sizeType="MM" barWidth="5" labelPlacementMethod="XHeight" penColor="#000000" diagramOrientation="Up" enabled="0" penAlpha="255" rotationOffset="270" penWidth="0" height="15" scaleDependency="Area" lineSizeScale="3x:0,0,0,0,0,0" lineSizeType="MM" maxScaleDenominator="1e+08" sizeScale="3x:0,0,0,0,0,0" opacity="1" scaleBasedVisibility="0">
+          <fontProperties style="" description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0"/>
+          <attribute field="" color="#000000" label=""/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings placement="0" zIndex="0" linePlacementFlags="18" obstacle="0" dist="0" showAll="1" priority="0">
+        <properties>
+          <Option type="Map">
+            <Option type="QString" value="" name="name"/>
+            <Option name="properties"/>
+            <Option type="QString" value="collection" name="type"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
+        <activeChecks/>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="id">
+          <editWidget type="Range">
+            <config>
+              <Option type="Map">
+                <Option type="bool" value="true" name="AllowNull"/>
+                <Option type="int" value="2147483647" name="Max"/>
+                <Option type="int" value="-2147483648" name="Min"/>
+                <Option type="int" value="0" name="Precision"/>
+                <Option type="int" value="1" name="Step"/>
+                <Option type="QString" value="SpinBox" name="Style"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="typ">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="revize">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="koment">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="indicie">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="indic_id">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="xcoord">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="ycoord">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="nazev_orp">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="charorp">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="kod_ku_p">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="naz_ku_p">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="kod_obec_p">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="naz_obec_p">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="lau1_p">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="naz_lau1_p">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="cznuts3">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="naz_cnuts3">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="poznamka">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="kod_orp">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="id_orp">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="stav">
+          <editWidget type="Range">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="id" name=""/>
+        <alias index="1" field="typ" name=""/>
+        <alias index="2" field="revize" name=""/>
+        <alias index="3" field="koment" name=""/>
+        <alias index="4" field="indicie" name=""/>
+        <alias index="5" field="indic_id" name=""/>
+        <alias index="6" field="xcoord" name=""/>
+        <alias index="7" field="ycoord" name=""/>
+        <alias index="8" field="nazev_orp" name=""/>
+        <alias index="9" field="charorp" name=""/>
+        <alias index="10" field="kod_ku_p" name=""/>
+        <alias index="11" field="naz_ku_p" name=""/>
+        <alias index="12" field="kod_obec_p" name=""/>
+        <alias index="13" field="naz_obec_p" name=""/>
+        <alias index="14" field="lau1_p" name=""/>
+        <alias index="15" field="naz_lau1_p" name=""/>
+        <alias index="16" field="cznuts3" name=""/>
+        <alias index="17" field="naz_cnuts3" name=""/>
+        <alias index="18" field="poznamka" name=""/>
+        <alias index="19" field="kod_orp" name=""/>
+        <alias index="20" field="id_orp" name=""/>
+        <alias index="21" field="stav" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default field="id" expression="" applyOnUpdate="0"/>
+        <default field="typ" expression="" applyOnUpdate="0"/>
+        <default field="revize" expression="" applyOnUpdate="0"/>
+        <default field="koment" expression="" applyOnUpdate="0"/>
+        <default field="indicie" expression="" applyOnUpdate="0"/>
+        <default field="indic_id" expression="" applyOnUpdate="0"/>
+        <default field="xcoord" expression="" applyOnUpdate="0"/>
+        <default field="ycoord" expression="" applyOnUpdate="0"/>
+        <default field="nazev_orp" expression="" applyOnUpdate="0"/>
+        <default field="charorp" expression="" applyOnUpdate="0"/>
+        <default field="kod_ku_p" expression="" applyOnUpdate="0"/>
+        <default field="naz_ku_p" expression="" applyOnUpdate="0"/>
+        <default field="kod_obec_p" expression="" applyOnUpdate="0"/>
+        <default field="naz_obec_p" expression="" applyOnUpdate="0"/>
+        <default field="lau1_p" expression="" applyOnUpdate="0"/>
+        <default field="naz_lau1_p" expression="" applyOnUpdate="0"/>
+        <default field="cznuts3" expression="" applyOnUpdate="0"/>
+        <default field="naz_cnuts3" expression="" applyOnUpdate="0"/>
+        <default field="poznamka" expression="" applyOnUpdate="0"/>
+        <default field="kod_orp" expression="" applyOnUpdate="0"/>
+        <default field="id_orp" expression="" applyOnUpdate="0"/>
+        <default field="stav" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint field="id" notnull_strength="1" constraints="3" unique_strength="1" exp_strength="0"/>
+        <constraint field="typ" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="revize" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="koment" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="indicie" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="indic_id" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="xcoord" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="ycoord" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="nazev_orp" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="charorp" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="kod_ku_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="naz_ku_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="kod_obec_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="naz_obec_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="lau1_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="naz_lau1_p" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="cznuts3" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="naz_cnuts3" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="poznamka" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="kod_orp" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="id_orp" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+        <constraint field="stav" notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" field="id" desc=""/>
+        <constraint exp="" field="typ" desc=""/>
+        <constraint exp="" field="revize" desc=""/>
+        <constraint exp="" field="koment" desc=""/>
+        <constraint exp="" field="indicie" desc=""/>
+        <constraint exp="" field="indic_id" desc=""/>
+        <constraint exp="" field="xcoord" desc=""/>
+        <constraint exp="" field="ycoord" desc=""/>
+        <constraint exp="" field="nazev_orp" desc=""/>
+        <constraint exp="" field="charorp" desc=""/>
+        <constraint exp="" field="kod_ku_p" desc=""/>
+        <constraint exp="" field="naz_ku_p" desc=""/>
+        <constraint exp="" field="kod_obec_p" desc=""/>
+        <constraint exp="" field="naz_obec_p" desc=""/>
+        <constraint exp="" field="lau1_p" desc=""/>
+        <constraint exp="" field="naz_lau1_p" desc=""/>
+        <constraint exp="" field="cznuts3" desc=""/>
+        <constraint exp="" field="naz_cnuts3" desc=""/>
+        <constraint exp="" field="poznamka" desc=""/>
+        <constraint exp="" field="kod_orp" desc=""/>
+        <constraint exp="" field="id_orp" desc=""/>
+        <constraint exp="" field="stav" desc=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortOrder="0" sortExpression="" actionWidgetStyle="dropDown">
+        <columns>
+          <column type="field" name="id" width="-1" hidden="0"/>
+          <column type="field" name="typ" width="-1" hidden="0"/>
+          <column type="field" name="revize" width="-1" hidden="0"/>
+          <column type="field" name="koment" width="-1" hidden="0"/>
+          <column type="field" name="indicie" width="-1" hidden="0"/>
+          <column type="field" name="indic_id" width="-1" hidden="0"/>
+          <column type="field" name="xcoord" width="-1" hidden="0"/>
+          <column type="field" name="ycoord" width="-1" hidden="0"/>
+          <column type="field" name="nazev_orp" width="-1" hidden="0"/>
+          <column type="field" name="charorp" width="-1" hidden="0"/>
+          <column type="field" name="kod_ku_p" width="-1" hidden="0"/>
+          <column type="field" name="naz_ku_p" width="-1" hidden="0"/>
+          <column type="field" name="kod_obec_p" width="-1" hidden="0"/>
+          <column type="field" name="naz_obec_p" width="-1" hidden="0"/>
+          <column type="field" name="lau1_p" width="-1" hidden="0"/>
+          <column type="field" name="naz_lau1_p" width="-1" hidden="0"/>
+          <column type="field" name="cznuts3" width="-1" hidden="0"/>
+          <column type="field" name="naz_cnuts3" width="-1" hidden="0"/>
+          <column type="field" name="poznamka" width="-1" hidden="0"/>
+          <column type="field" name="kod_orp" width="-1" hidden="0"/>
+          <column type="field" name="id_orp" width="-1" hidden="0"/>
+          <column type="field" name="stav" width="-1" hidden="0"/>
+          <column type="actions" width="-1" hidden="1"/>
+        </columns>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field editable="1" name="charorp"/>
+        <field editable="1" name="cznuts3"/>
+        <field editable="1" name="id"/>
+        <field editable="1" name="id_orp"/>
+        <field editable="1" name="indic_id"/>
+        <field editable="1" name="indicie"/>
+        <field editable="1" name="kod_ku_p"/>
+        <field editable="1" name="kod_obec_p"/>
+        <field editable="1" name="kod_orp"/>
+        <field editable="1" name="koment"/>
+        <field editable="1" name="lau1_p"/>
+        <field editable="1" name="naz_cnuts3"/>
+        <field editable="1" name="naz_ku_p"/>
+        <field editable="1" name="naz_lau1_p"/>
+        <field editable="1" name="naz_obec_p"/>
+        <field editable="1" name="nazev_orp"/>
+        <field editable="1" name="poznamka"/>
+        <field editable="1" name="revize"/>
+        <field editable="1" name="stav"/>
+        <field editable="1" name="typ"/>
+        <field editable="1" name="xcoord"/>
+        <field editable="1" name="ycoord"/>
+      </editable>
+      <labelOnTop>
+        <field labelOnTop="0" name="charorp"/>
+        <field labelOnTop="0" name="cznuts3"/>
+        <field labelOnTop="0" name="id"/>
+        <field labelOnTop="0" name="id_orp"/>
+        <field labelOnTop="0" name="indic_id"/>
+        <field labelOnTop="0" name="indicie"/>
+        <field labelOnTop="0" name="kod_ku_p"/>
+        <field labelOnTop="0" name="kod_obec_p"/>
+        <field labelOnTop="0" name="kod_orp"/>
+        <field labelOnTop="0" name="koment"/>
+        <field labelOnTop="0" name="lau1_p"/>
+        <field labelOnTop="0" name="naz_cnuts3"/>
+        <field labelOnTop="0" name="naz_ku_p"/>
+        <field labelOnTop="0" name="naz_lau1_p"/>
+        <field labelOnTop="0" name="naz_obec_p"/>
+        <field labelOnTop="0" name="nazev_orp"/>
+        <field labelOnTop="0" name="poznamka"/>
+        <field labelOnTop="0" name="revize"/>
+        <field labelOnTop="0" name="stav"/>
+        <field labelOnTop="0" name="typ"/>
+        <field labelOnTop="0" name="xcoord"/>
+        <field labelOnTop="0" name="ycoord"/>
+      </labelOnTop>
+      <widgets/>
+      <previewExpression>id</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+  </projectlayers>
+  <layerorder>
+    <layer id="indicie_dpz_5d408a7d_345c_42d9_8ebd_2b8fed27aefc"/>
+    <layer id="indicie_pr_abb08ce9_5fd2_445d_9ccb_2d2d227790c1"/>
+    <layer id="Základní_mapa_1_10_000_c40dd6e5_fb74_4598_99ad_32e0be2e4552"/>
+    <layer id="Základní_mapa_1_25_000_7ea438a2_ece5_4b96_ac2d_cf5eb274aee3"/>
+    <layer id="hranice_bd71d6c7_ce9f_4650_bf18_ec4101d08e6e"/>
+    <layer id="Ortofoto_c1a255f6_db31_4f34_b203_f9d2e9a6c872"/>
+    <layer id="MČR_1_2_000_000_965dfeb0_be97_4ac7_a5d9_986c3ab433c8"/>
+  </layerorder>
+  <properties>
+    <WMSContactPerson type="QString">Radim Jaeger</WMSContactPerson>
+    <WMSContactMail type="QString">info@sysnet.cz</WMSContactMail>
+    <WMTSUrl type="QString"></WMTSUrl>
+    <WMSServiceTitle type="QString">Indicie kontaminace</WMSServiceTitle>
+    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
+    <WMTSPngLayers>
+      <Layer type="QStringList">
+        <value>indicie_pr_abb08ce9_5fd2_445d_9ccb_2d2d227790c1</value>
+        <value>indicie_dpz_5d408a7d_345c_42d9_8ebd_2b8fed27aefc</value>
+        <value>hranice_bd71d6c7_ce9f_4650_bf18_ec4101d08e6e</value>
+        <value>Ortofoto_c1a255f6_db31_4f34_b203_f9d2e9a6c872</value>
+        <value>Základní_mapa_1_25_000_7ea438a2_ece5_4b96_ac2d_cf5eb274aee3</value>
+        <value>Základní_mapa_1_10_000_c40dd6e5_fb74_4598_99ad_32e0be2e4552</value>
+        <value>MČR_1_2_000_000_965dfeb0_be97_4ac7_a5d9_986c3ab433c8</value>
+      </Layer>
+      <Project type="bool">true</Project>
+      <Group type="QStringList"/>
+    </WMTSPngLayers>
+    <WMSKeywordList type="QStringList">
+      <value>sekm</value>
+      <value>sekm3</value>
+      <value>indicie</value>
+      <value>dpz</value>
+    </WMSKeywordList>
+    <WMSFees type="QString">no conditions apply</WMSFees>
+    <WMTSGrids>
+      <Config type="QStringList">
+        <value>EPSG:5514,-340109.0935938583,-1347494.3983549979,21829890,18</value>
+      </Config>
+      <CRS type="QStringList">
+        <value>EPSG:5514</value>
+      </CRS>
+    </WMTSGrids>
+    <Macros>
+      <pythonCode type="QString"></pythonCode>
+    </Macros>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <Legend>
+      <filterByMap type="bool">false</filterByMap>
+    </Legend>
+    <WFSLayersPrecision>
+      <indicie_pr_abb08ce9_5fd2_445d_9ccb_2d2d227790c1 type="int">8</indicie_pr_abb08ce9_5fd2_445d_9ccb_2d2d227790c1>
+      <indicie_dpz_5d408a7d_345c_42d9_8ebd_2b8fed27aefc type="int">8</indicie_dpz_5d408a7d_345c_42d9_8ebd_2b8fed27aefc>
+      <hranice_bd71d6c7_ce9f_4650_bf18_ec4101d08e6e type="int">8</hranice_bd71d6c7_ce9f_4650_bf18_ec4101d08e6e>
+    </WFSLayersPrecision>
+    <WFSLayers type="QStringList">
+      <value>hranice_bd71d6c7_ce9f_4650_bf18_ec4101d08e6e</value>
+      <value>indicie_dpz_5d408a7d_345c_42d9_8ebd_2b8fed27aefc</value>
+      <value>indicie_pr_abb08ce9_5fd2_445d_9ccb_2d2d227790c1</value>
+    </WFSLayers>
+    <WMSAddWktGeometry type="bool">true</WMSAddWktGeometry>
+    <PositionPrecision>
+      <DegreeFormat type="QString">MU</DegreeFormat>
+      <Automatic type="bool">true</Automatic>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+    </PositionPrecision>
+    <DefaultStyles>
+      <RandomColors type="bool">true</RandomColors>
+      <ColorRamp type="QString"></ColorRamp>
+      <Line type="QString"></Line>
+      <Marker type="QString"></Marker>
+      <Opacity type="double">1</Opacity>
+      <Fill type="QString"></Fill>
+    </DefaultStyles>
+    <WMSRestrictedLayers type="QStringList"/>
+    <WMSUrl type="QString">http://sekm3.sysnet.cz/cgi-bin/qgis_mapserv.fcgi?service=WMS&amp;REQUEST=GetCapabilities&amp;MAP=indicie.qgs</WMSUrl>
+    <WMTSJpegLayers>
+      <Layer type="QStringList">
+        <value>indicie_pr_abb08ce9_5fd2_445d_9ccb_2d2d227790c1</value>
+        <value>indicie_dpz_5d408a7d_345c_42d9_8ebd_2b8fed27aefc</value>
+        <value>hranice_bd71d6c7_ce9f_4650_bf18_ec4101d08e6e</value>
+        <value>Ortofoto_c1a255f6_db31_4f34_b203_f9d2e9a6c872</value>
+        <value>Základní_mapa_1_25_000_7ea438a2_ece5_4b96_ac2d_cf5eb274aee3</value>
+        <value>Základní_mapa_1_10_000_c40dd6e5_fb74_4598_99ad_32e0be2e4552</value>
+        <value>MČR_1_2_000_000_965dfeb0_be97_4ac7_a5d9_986c3ab433c8</value>
+      </Layer>
+      <Project type="bool">true</Project>
+      <Group type="QStringList"/>
+    </WMTSJpegLayers>
+    <WCSLayers type="QStringList">
+      <value>MČR_1_2_000_000_965dfeb0_be97_4ac7_a5d9_986c3ab433c8</value>
+      <value>Ortofoto_c1a255f6_db31_4f34_b203_f9d2e9a6c872</value>
+      <value>Základní_mapa_1_10_000_c40dd6e5_fb74_4598_99ad_32e0be2e4552</value>
+      <value>Základní_mapa_1_25_000_7ea438a2_ece5_4b96_ac2d_cf5eb274aee3</value>
+    </WCSLayers>
+    <WFSUrl type="QString"></WFSUrl>
+    <WMSServiceCapabilities type="bool">true</WMSServiceCapabilities>
+    <WMSOnlineResource type="QString">http://sekm.cz</WMSOnlineResource>
+    <Gui>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+      <SelectionColorGreenPart type="int">127</SelectionColorGreenPart>
+      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+    </Gui>
+    <WMSCrsList type="QStringList">
+      <value>EPSG:5514</value>
+    </WMSCrsList>
+    <WMSSegmentizeFeatureInfoGeometry type="bool">true</WMSSegmentizeFeatureInfoGeometry>
+    <WMSContactOrganization type="QString">SYSNET s.r.o.</WMSContactOrganization>
+    <WMSDefaultMapUnitsPerMm type="double">1</WMSDefaultMapUnitsPerMm>
+    <WMSPrecision type="QString">8</WMSPrecision>
+    <WMSContactPosition type="QString"></WMSContactPosition>
+    <Measure>
+      <Ellipsoid type="QString">bessel</Ellipsoid>
+    </Measure>
+    <WMSImageQuality type="int">90</WMSImageQuality>
+    <WMTSMinScale type="int">5000</WMTSMinScale>
+    <Scales>
+      <ScalesList type="QStringList">
+        <value>1:2000000</value>
+        <value>1:1000000</value>
+        <value>1:500000</value>
+        <value>1:250000</value>
+        <value>1:100000</value>
+        <value>1:50000</value>
+        <value>1:25000</value>
+        <value>1:10000</value>
+        <value>1:5000</value>
+      </ScalesList>
+      <useProjectScales type="bool">true</useProjectScales>
+    </Scales>
+    <SpatialRefSys>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+    </SpatialRefSys>
+    <Measurement>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+      <AreaUnits type="QString">m2</AreaUnits>
+    </Measurement>
+    <WFSTLayers>
+      <Update type="QStringList"/>
+      <Insert type="QStringList"/>
+      <Delete type="QStringList"/>
+    </WFSTLayers>
+    <WMSContactPhone type="QString"></WMSContactPhone>
+    <WMSExtent type="QStringList">
+      <value>-951044.43344616866670549</value>
+      <value>-1345163.5906822900287807</value>
+      <value>-385365.26620250922860578</value>
+      <value>-831871.9234920657472685</value>
+    </WMSExtent>
+    <WMSUseLayerIDs type="bool">true</WMSUseLayerIDs>
+    <WMSRestrictedComposers type="QStringList"/>
+    <WMSInspire>
+      <language type="QString">cze</language>
+      <activated type="bool">true</activated>
+      <metadataDate type="QString">2019-06-01</metadataDate>
+      <temporalReference type="QString">2019-06-01</temporalReference>
+    </WMSInspire>
+    <WMSMaxAtlasFeatures type="int">1</WMSMaxAtlasFeatures>
+    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <WMSRootName type="QString">indicie</WMSRootName>
+    <PAL>
+      <ShowingPartialsLabels type="bool">true</ShowingPartialsLabels>
+      <TextFormat type="int">0</TextFormat>
+      <CandidatesPoint type="int">16</CandidatesPoint>
+      <ShowingCandidates type="bool">false</ShowingCandidates>
+      <SearchMethod type="int">0</SearchMethod>
+      <CandidatesLine type="int">50</CandidatesLine>
+      <CandidatesPolygon type="int">30</CandidatesPolygon>
+      <DrawRectOnly type="bool">false</DrawRectOnly>
+      <ShowingAllLabels type="bool">false</ShowingAllLabels>
+    </PAL>
+    <WMTSLayers>
+      <Layer type="QStringList">
+        <value>indicie_pr_abb08ce9_5fd2_445d_9ccb_2d2d227790c1</value>
+        <value>indicie_dpz_5d408a7d_345c_42d9_8ebd_2b8fed27aefc</value>
+        <value>hranice_bd71d6c7_ce9f_4650_bf18_ec4101d08e6e</value>
+        <value>Ortofoto_c1a255f6_db31_4f34_b203_f9d2e9a6c872</value>
+        <value>Základní_mapa_1_25_000_7ea438a2_ece5_4b96_ac2d_cf5eb274aee3</value>
+        <value>Základní_mapa_1_10_000_c40dd6e5_fb74_4598_99ad_32e0be2e4552</value>
+        <value>MČR_1_2_000_000_965dfeb0_be97_4ac7_a5d9_986c3ab433c8</value>
+      </Layer>
+      <Project type="bool">true</Project>
+      <Group type="QStringList"/>
+    </WMTSLayers>
+    <WCSUrl type="QString"></WCSUrl>
+  </properties>
+  <visibility-presets/>
+  <transformContext/>
+  <projectMetadata>
+    <identifier></identifier>
+    <parentidentifier></parentidentifier>
+    <language></language>
+    <type></type>
+    <title>Indicie kontaminace</title>
+    <abstract></abstract>
+    <contact>
+      <name></name>
+      <organization></organization>
+      <position></position>
+      <voice></voice>
+      <fax></fax>
+      <email></email>
+      <role></role>
+    </contact>
+    <links/>
+    <author>Radim J�ger</author>
+    <creation>2019-05-28T17:08:30</creation>
+  </projectMetadata>
+  <Annotations/>
+  <Layouts/>
+</qgis>

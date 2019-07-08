@@ -41,40 +41,21 @@
         "additionalMouseCrs": ["EPSG:21781", "EPSG:2056"]
       },
       {
-        "url": "http://172.28.1.2/cgi-bin/qgis_mapserv.fcgi",
-        "attribution": "Test. Credits to Tim Sutton.",
-        "attributionUrl": "https://www.geoportal.de/",
+        "url": "http://qgis-server.sekm-net/cgi-bin/qgis_mapserv.fcgi",
+        "attribution": "SEKM3 (SYSNET s.r.o.)",
+        "attributionUrl": "http://info.sekm.cz/",
         "format": "image/png; mode=8bit",
         "default": true,
         "scales": [40000000,20000000,10000000,5000000,2560000,1280000,640000,320000,160000,80000,40000,20000,10000,5000],
         "backgroundLayers": [
           {
-            "name": "StamenWatercolor",
+            "name": "osm",
             "visibility": true
           }
         ],
         "searchProviders": ["coordinates"],
         "mapCrs": "EPSG:4326",
-        "extent": [-0.88991, -0.23035, -0.07281, 1.04084],
-        "additionalMouseCrs": ["EPSG:25832"]
-      },
-      {
-        "url": "http://172.18.0.18/cgi-bin/qgis_mapserv.fcgi",
-        "attribution": "SEKM3. Indicie (SYSNET s.r.o.)",
-        "attributionUrl": "https://www.geoportal.de/",
-        "format": "image/png; mode=8bit",
-        "default": true,
-        "scales": [40000000,20000000,10000000,5000000,2560000,1280000,640000,320000,160000,80000,40000,20000,10000,5000],
-        "backgroundLayers": [
-          {
-            "name": "StamenWatercolor",
-            "visibility": true
-          }
-        ],
-        "searchProviders": ["coordinates"],
-        "mapCrs": "EPSG:4326",
-        "extent": [-0.88991, -0.23035, -0.07281, 1.04084],
-        "additionalMouseCrs": ["EPSG:25832"]
+        "additionalMouseCrs": ["EPSG:4326"]
       }
     ],
     "groups": [

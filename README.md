@@ -30,4 +30,11 @@ Put the IP from your computer in docker-qgis-server-qwc2/client/data/themesConfi
 	-t sysnetcz/qgis-client
 
 
+    docker run -d --name geoportal \
+	--network sekm-net \
+	-p 8091:8081 \
+	-v $(pwd)/client/data/themesConfig.json:/opt/sekm-geoportal/themesConfig.json \
+	-t sysnetcz/geoportal
+
+
     http://192.168.1.243/cgi-bin/qgis_mapserv.fcgi?service=WMS&REQUEST=GetCapabilities&MAP=project.qgs
