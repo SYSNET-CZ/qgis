@@ -35,6 +35,7 @@ RUN gpg --keyserver keyserver.ubuntu.com --recv CAEB3DC3BDF7FB45
 RUN gpg --export --armor CAEB3DC3BDF7FB45 | apt-key add - 
 RUN apt-get -y update
 
+RUN apt-get install -y python3-qgis qgis-providers
 RUN apt-get install -y qgis-server python-qgis apache2 libapache2-mod-fcgid unzip --force-yes
 
 #Install wfsOutputExtension plugin
